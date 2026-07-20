@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sub-Zero & Viking Repair Of Los Angeles</title>
+    <meta name="description" content="Contact our team at 310-726-3218 for fast reliable service. Reach out today to schedule expert appliance repair tailored to your needs.">
+    <link rel="icon" href="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/cropped-Sub-Zero-Viking-Repair-of-Los-Angeles-Favicon-32x32.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="load-includes.js" defer></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #e65644;
+            --primary-dark: #d64f3e;
+            --dark: #000422;
+            --dark-bg: #0d0000;
+            --gray: #8e91aa;
+            --light-bg: #f8f8fb;
+            --white: #ffffff;
+            --teal: #06BBBC;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        body { font-family: 'Roboto', sans-serif; color: var(--dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .text-white { color: var(--white); }
+        .text-primary { color: var(--primary); }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-30 { margin-bottom: 30px; }
+        .mb-40 { margin-bottom: 40px; }
+        .mt-20 { margin-top: 20px; }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        .section-title span { color: var(--primary); }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(230,86,68,0.35); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--dark); }
+        .btn-teal { background: var(--teal); color: var(--white); }
+        .btn-teal:hover { background: #059b9c; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(6,187,188,0.35); }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .animate { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a3a 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230,86,68,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        .page-hero h1 span { color: var(--primary); }
+        .page-hero p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 15px auto 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* CONTACT INFO */
+        .contact-info-section { padding: 60px 0; background: var(--white); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .contact-card {
+            text-align: center;
+            padding: 35px 25px;
+            background: var(--light-bg);
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        .contact-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow); }
+        .contact-card .icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; display: block; }
+        .contact-card h4 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
+        .contact-card p { color: var(--gray); font-size: 1rem; }
+        .contact-card a { color: var(--primary); font-weight: 500; }
+        .contact-card a:hover { color: var(--primary-dark); }
+        
+        /* GOOGLE FORM */
+        .form-section { padding: 60px 0; background: var(--light-bg); }
+        .form-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding: 10px;
+        }
+        .form-wrapper iframe {
+            width: 100%;
+            height: 1400px;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        /* AREAS */
+        .areas-section { padding: 60px 0; background: var(--white); }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+        .areas-grid .area-item {
+            background: var(--light-bg);
+            padding: 14px 18px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .areas-grid .area-item:hover { background: var(--primary); color: var(--white); transform: translateY(-3px); }
+        
+        /* MAP */
+        .map-section { padding: 0; background: var(--white); }
+        .map-section iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .areas-grid { grid-template-columns: 1fr 1fr; }
+            .form-wrapper iframe { height: 1200px; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .btn { width: 100%; text-align: center; }
+            .areas-grid { grid-template-columns: 1fr; }
+            .form-wrapper iframe { height: 1100px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER LOADED BY JS ===== -->
+    <!-- ===== FOOTER LOADED BY JS ===== -->
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="animate">Contact <span>Us</span></h1>
+            <p class="animate animate-delay-1">Fast Appliance Help When You Need It. Call us today to schedule service and check technician availability in your area.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT INFO ===== -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Get In <span>Touch</span></h2>
+            <p class="section-subtitle text-center animate animate-delay-1">Sub-Zero &amp; Viking Repair of Los Angeles provides reliable appliance repair for homes and businesses across Los Angeles County.</p>
+            <div class="contact-grid">
+                <div class="contact-card animate animate-delay-1">
+                    <i class="fas fa-phone-volume icon"></i>
+                    <h4>Call Us</h4>
+                    <p><a href="tel:+13107263218">+1 (310) 726-3218</a></p>
+                </div>
+                <div class="contact-card animate animate-delay-2">
+                    <i class="fas fa-envelope icon"></i>
+                    <h4>Email Us</h4>
+                    <p><a href="mailto:info@subzerovikingappliancerepair.net">info@subzerovikingappliancerepair.net</a></p>
+                </div>
+                <div class="contact-card animate animate-delay-3">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <h4>Address</h4>
+                    <p>Los Angeles, California, United States</p>
+                </div>
+                <div class="contact-card animate animate-delay-4">
+                    <i class="fas fa-clock icon"></i>
+                    <h4>Business Hours</h4>
+                    <p>Mon to Sun (8:00 am - 8:00 pm)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GOOGLE FORM ===== -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Schedule Your <span>Appliance Repair</span></h2>
+            <p class="section-subtitle text-center animate animate-delay-1">Fill out our simple booking form with your appliance problem, preferred service date, and contact details. Our team will review your request and confirm the appointment.</p>
+            <div class="form-wrapper animate animate-delay-2">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScluXj503rvYwIZOoIBzzKf6w1VtjrubRxoN_up6gY1s3nS5A/viewform?embedded=true" title="Appointment Booking Form" loading="lazy">
+                    Loading…
+                </iframe>
+            </div>
+            <p class="text-center animate animate-delay-3" style="margin-top:20px; color:var(--gray);">Prefer to speak with someone directly? Call us at <a href="tel:+13107263218" style="color:var(--primary); font-weight:600;">(310) 726-3218</a></p>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE AREAS ===== -->
+    <section class="areas-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Proudly Serving <span>Los Angeles</span> and Nearby Communities</h2>
+            <p class="section-subtitle text-center animate animate-delay-1">We currently serve Los Angeles, Santa Monica, Burbank, Glendale, Pasadena, and many more.</p>
+            <div class="areas-grid">
+                <div class="area-item animate">Los Angeles</div>
+                <div class="area-item animate animate-delay-1">Santa Monica</div>
+                <div class="area-item animate animate-delay-2">Burbank</div>
+                <div class="area-item animate animate-delay-3">Glendale</div>
+                <div class="area-item animate animate-delay-4">Pasadena</div>
+                <div class="area-item animate animate-delay-5">Sherman Oaks</div>
+                <div class="area-item animate animate-delay-1">North Hollywood</div>
+                <div class="area-item animate animate-delay-2">Van Nuys</div>
+                <div class="area-item animate animate-delay-3">Long Beach</div>
+                <div class="area-item animate animate-delay-4">West Los Angeles</div>
+                <div class="area-item animate animate-delay-5">El Monte</div>
+                <div class="area-item animate animate-delay-1">Culver City</div>
+            </div>
+            <p class="text-center animate animate-delay-2" style="margin-top:20px; color:var(--gray);">Not sure whether we serve your area? Call us at <a href="tel:+13107263218" style="color:var(--primary); font-weight:600;">(310) 726-3218</a>, and our team will confirm availability.</p>
+        </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423284.0535406294!2d-118.74206945916379!3d34.02060657611659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1781298415652!5m2!1sen!2s" title="Los Angeles Map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- ===== SCROLL ANIMATION ===== -->
+    <script>
+        const animateElements = document.querySelectorAll('.animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.opacity = '0';
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.page-hero .animate').forEach(el => {
+                el.style.opacity = '1';
+            });
+        }, 100);
+    </script>
+
+</body>
+</html>
