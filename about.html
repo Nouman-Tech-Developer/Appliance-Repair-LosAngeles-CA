@@ -408,4 +408,48 @@
                 <div class="area-item animate animate-delay-3">Sherman Oaks, CA</div>
                 <div class="area-item animate animate-delay-4">Glendale, CA</div>
                 <div class="area-item animate animate-delay-5">Long Beach, CA</div>
-                <div class="area-item animate animate-delay-1">North Hollywood
+                <div class="area-item animate animate-delay-1">North Hollywood, CA</div>
+                <div class="area-item animate animate-delay-2">Pasadena, CA</div>
+                <div class="area-item animate animate-delay-3">Santa Monica, CA</div>
+                <div class="area-item animate animate-delay-4">Van Nuys, CA</div>
+                <div class="area-item animate animate-delay-5">West Los Angeles, CA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Let Us Help With Your <span style="color:var(--primary);">Appliance Problem</span></h2>
+            <p class="animate animate-delay-1">A refrigerator that is not cooling, an oven that is not heating, or a dishwasher that is not draining can quickly disrupt your daily routine. Fast and proper repair helps prevent further damage.</p>
+            <div class="animate animate-delay-2">
+                <a href="tel:+13107263218" class="btn btn-primary"><i class="fas fa-phone"></i> (310) 726-3218</a>
+                <a href="#" class="btn btn-outline">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCROLL ANIMATION ===== -->
+    <script>
+        const animateElements = document.querySelectorAll('.animate, .animate-left, .animate-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.animate, .animate-left, .animate-right').forEach(el => {
+            el.style.opacity = '0';
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.page-hero .animate').forEach(el => {
+                el.style.opacity = '1';
+            });
+        }, 100);
+    </script>
+
+</body>
+</html>
