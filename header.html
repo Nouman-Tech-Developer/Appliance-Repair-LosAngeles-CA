@@ -1,14 +1,15 @@
-<header class="header">
+<!-- ===== HEADER ===== -->
+<header class="header" id="mainHeader">
     <div class="container">
         <a href="index.html" class="logo">
-            <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/07/Sub-Zero-Viking-Repair-of-Los-Angeles-Logo-1.webp" alt="Logo">
+            <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/07/Sub-Zero-Viking-Repair-of-Los-Angeles-Logo-1.webp" alt="Sub-Zero & Viking Repair Logo">
         </a>
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span><span></span><span></span>
         </button>
         <nav class="nav" id="nav">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="brands.html">Brands</a>
             <a href="faqs.html">FAQs</a>
@@ -19,3 +20,137 @@
         </nav>
     </div>
 </header>
+
+<style>
+.header {
+    background: #000422;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.nav a {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    text-decoration: none;
+}
+.nav a:hover,
+.nav a.active {
+    color: #06BBBC;
+    background: rgba(255,255,255,0.05);
+}
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #06BBBC;
+    border-radius: 2px;
+}
+.nav .phone-link {
+    color: #ffffff;
+    background: #e65644;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+.nav .phone-link:hover {
+    background: #d64f3e;
+    color: #ffffff;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 3px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0 10px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav.open {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('open');
+        });
+    }
+    
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</script>
