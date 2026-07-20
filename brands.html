@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Sub-Zero & Viking Repair Of Los Angeles</title>
+    <meta name="description" content="Explore expert care for premium appliances like Sub-Zero, Thermador, Viking, Miele, and Wolf. Trust us to keep your high-end brands running perfectly.">
+    <link rel="icon" href="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/cropped-Sub-Zero-Viking-Repair-of-Los-Angeles-Favicon-32x32.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="load-includes.js" defer></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #e65644;
+            --primary-dark: #d64f3e;
+            --dark: #000422;
+            --dark-bg: #0d0000;
+            --gray: #8e91aa;
+            --light-bg: #f8f8fb;
+            --white: #ffffff;
+            --teal: #06BBBC;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        body { font-family: 'Roboto', sans-serif; color: var(--dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .text-white { color: var(--white); }
+        .text-primary { color: var(--primary); }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-30 { margin-bottom: 30px; }
+        .mb-40 { margin-bottom: 40px; }
+        .mt-20 { margin-top: 20px; }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        .section-title span { color: var(--primary); }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(230,86,68,0.35); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--dark); }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .animate { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        .animate-left { opacity: 0; animation: fadeInLeft 0.8s ease forwards; }
+        .animate-right { opacity: 0; animation: fadeInRight 0.8s ease forwards; }
+        
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a3a 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230,86,68,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        .page-hero h1 span { color: var(--primary); }
+        .page-hero p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 15px auto 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* BRAND CARDS */
+        .brands-grid-section { padding: 80px 0; background: var(--white); }
+        .brand-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .brand-card {
+            background: var(--light-bg);
+            padding: 30px 25px;
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        .brand-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow); }
+        .brand-card img { height: 50px; object-fit: contain; margin: 0 auto 15px; }
+        .brand-card h4 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 10px; }
+        .brand-card p { color: var(--gray); font-size: 0.95rem; }
+        
+        /* SERVICES CARDS */
+        .services-cards-section { padding: 80px 0; background: var(--light-bg); }
+        .services-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 35px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.12); }
+        .service-card .icon { font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; display: block; }
+        .service-card h4 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 10px; }
+        .service-card p { color: var(--gray); font-size: 0.95rem; }
+        
+        /* AREAS */
+        .areas-section { padding: 60px 0; background: var(--white); }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+        .areas-grid .area-item {
+            background: var(--light-bg);
+            padding: 14px 18px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .areas-grid .area-item:hover { background: var(--primary); color: var(--white); transform: translateY(-3px); }
+        
+        /* CTA */
+        .cta-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a3a 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-section h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.2rem; margin-bottom: 15px; }
+        .cta-section p { opacity: 0.8; max-width: 600px; margin: 0 auto 25px; }
+        .cta-section .btn { margin: 0 10px 10px; }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .brand-cards-grid { grid-template-columns: 1fr; }
+            .services-cards-grid { grid-template-columns: 1fr; }
+            .areas-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .btn { width: 100%; text-align: center; }
+            .areas-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER LOADED BY JS ===== -->
+    <!-- ===== FOOTER LOADED BY JS ===== -->
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="animate">Luxury <span>Appliance Brands</span></h1>
+            <p class="animate animate-delay-1">The Right Repair for Every Brand. Premium and major appliances use different parts and control systems. Our technicians verify the brand and model before selecting the appropriate repair method.</p>
+        </div>
+    </section>
+
+    <!-- ===== BRAND CARDS ===== -->
+    <section class="brands-grid-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Premium Appliance Brands <span>We Service</span></h2>
+            <p class="section-subtitle text-center animate animate-delay-1">We work on premium appliances as well as common brands used in homes and businesses across Los Angeles.</p>
+            <div class="brand-cards-grid">
+                
+                <!-- Sub-Zero -->
+                <div class="brand-card animate animate-delay-1">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/Sub-Zero-1024x271.webp" alt="Sub-Zero">
+                    <h4>Sub-Zero Repair</h4>
+                    <p>Sub-Zero refrigerators need steady cooling to protect stored food. We fix weak cooling and frost issues as well as water leaks and control faults. Our repair helps the unit maintain a stable temperature.</p>
+                </div>
+                
+                <!-- Viking -->
+                <div class="brand-card animate animate-delay-2">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/07/Viking-1024x255.webp" alt="Viking">
+                    <h4>Viking Repair</h4>
+                    <p>Viking appliances support busy kitchens and daily cooking needs. We repair heating problems and ignition faults in ranges and ovens for safe use. Each unit is checked for steady cooking performance.</p>
+                </div>
+                
+                <!-- Wolf -->
+                <div class="brand-card animate animate-delay-3">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/wolf.webp" alt="Wolf">
+                    <h4>Wolf Repair</h4>
+                    <p>Wolf cooking appliances need even heat for reliable daily results. We fix burners that fail to light and ovens that cook food unevenly. Our service helps restore accurate heat control.</p>
+                </div>
+                
+                <!-- Thermador -->
+                <div class="brand-card animate animate-delay-4">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/thermador-logo.webp" alt="Thermador">
+                    <h4>Thermador Repair</h4>
+                    <p>Thermador appliances use advanced systems for cooking and cooling. We repair weak cooling, poor heating, and malfunctioning controls. The unit is tested after the repair is complete.</p>
+                </div>
+                
+                <!-- Miele -->
+                <div class="brand-card animate animate-delay-5">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/05/Miele.webp" alt="Miele">
+                    <h4>Miele Repair</h4>
+                    <p>Miele makes kitchen and laundry appliances for daily home use. We fix drainage problems and heating faults when wash cycles stop early. Our repair helps restore smooth and reliable operation.</p>
+                </div>
+                
+                <!-- Gaggenau -->
+                <div class="brand-card animate animate-delay-1">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/Gaggenau.webp" alt="Gaggenau">
+                    <h4>Gaggenau Repair</h4>
+                    <p>Gaggenau appliances need a careful check before repair begins. We find heating and cooling problems, then restore safe, reliable performance. Each main part is checked for proper operation.</p>
+                </div>
+                
+                <!-- Liebherr -->
+                <div class="brand-card animate animate-delay-2">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/thermador-logo.webp" alt="Liebherr">
+                    <h4>Liebherr Repair</h4>
+                    <p>Liebherr refrigerators and wine coolers need steady temperatures every day. We fix poor cooling, heavy frost, water leaks, and faulty sensors. Our service helps protect stored food and drinks.</p>
+                </div>
+                
+                <!-- Fisher & Paykel -->
+                <div class="brand-card animate animate-delay-3">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/05/Miele.webp" alt="Fisher & Paykel">
+                    <h4>Fisher &amp; Paykel Repair</h4>
+                    <p>Fisher &amp; Paykel appliances can develop power and drainage problems. We check each unit and safely repair the part causing the main issue. The appliance is tested before the service ends.</p>
+                </div>
+                
+                <!-- Dacor -->
+                <div class="brand-card animate animate-delay-4">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/05/Miele.webp" alt="Dacor">
+                    <h4>Dacor Repair</h4>
+                    <p>Dacor makes cooking and cooling appliances for modern kitchens. We repair uneven heating and burner issues, as well as weak cooling and faulty controls. Our work helps restore safe daily use.</p>
+                </div>
+                
+                <!-- GE Monogram -->
+                <div class="brand-card animate animate-delay-5">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/Gaggenau.webp" alt="GE Monogram">
+                    <h4>GE Monogram Repair</h4>
+                    <p>GE Monogram appliances use modern controls for everyday use. We fix screen problems and temperature issues that affect normal performance. Each repair is completed based on the appliance model.</p>
+                </div>
+                
+                <!-- True Residential -->
+                <div class="brand-card animate animate-delay-1">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/05/Miele.webp" alt="True Residential">
+                    <h4>True Residential Repair</h4>
+                    <p>True Residential units need strong cooling to protect food and drinks. We repair loud operation, weak airflow, and water leaks inside the unit. Our service helps restore steady cooling performance.</p>
+                </div>
+                
+                <!-- Café -->
+                <div class="brand-card animate animate-delay-2">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/thermador-logo.webp" alt="Café">
+                    <h4>Café Repair</h4>
+                    <p>Café appliances use smart controls and modern features. We fix screen errors, heating problems, and cooling issues that affect daily use. The controls are tested after the repair.</p>
+                </div>
+                
+                <!-- Cove -->
+                <div class="brand-card animate animate-delay-3">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/Gaggenau.webp" alt="Cove">
+                    <h4>Cove Repair</h4>
+                    <p>Cove dishwashers need proper water flow for clean dishes. We repair drainage problems and stopped cycles, as well as faulty pumps that prevent normal use. Our service helps restore a complete wash cycle.</p>
+                </div>
+                
+                <!-- THOR Kitchen -->
+                <div class="brand-card animate animate-delay-4">
+                    <img src="https://subzerovikingappliancerepair.net/wp-content/uploads/2025/03/thermador-logo.webp" alt="THOR Kitchen">
+                    <h4>THOR Kitchen Repair</h4>
+                    <p>THOR Kitchen appliances support everyday cooking and cooling needs. We fix weak flames and uneven heat, as well as refrigerator cooling problems and control faults. Each appliance is checked for safe operation.</p>
+                </div>
+                
+            </div>
+            <p class="text-center animate animate-delay-5" style="margin-top:20px; color:var(--gray);">Contact us if your appliance is not listed. Service may still be available for your unit.</p>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES CARDS ===== -->
+    <section class="services-cards-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Repair, Installation <span>&amp; Maintenance</span></h2>
+            <div class="services-cards-grid">
+                <div class="service-card animate animate-delay-1">
+                    <i class="fas fa-tools icon"></i>
+                    <h4>Repairs</h4>
+                    <p>Quick and professional appliance repair services for refrigerators, freezers, ovens, washers, dryers, dishwashers, wine coolers, and other household essentials. We restore the performance and reliability of your appliances with speed and precision.</p>
+                </div>
+                <div class="service-card animate animate-delay-2">
+                    <i class="fas fa-wrench icon"></i>
+                    <h4>Installations</h4>
+                    <p>We offer expert installation services for refrigerators, freezers, dishwashers, washers, dryers, cooktops, ranges, and hood vents. Our team ensures safe and correct setup from the start, so you can rely on your appliances to function properly from day one.</p>
+                </div>
+                <div class="service-card animate animate-delay-3">
+                    <i class="fas fa-clipboard-check icon"></i>
+                    <h4>Maintenance</h4>
+                    <p>Prevent costly breakdowns and extend the life of your appliances with our maintenance services. Routine check-ups help improve efficiency, performance, and long-term reliability, keeping your home appliances in top condition for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE AREAS ===== -->
+    <section class="areas-section">
+        <div class="container">
+            <h2 class="section-title text-center animate">Serving <span>Los Angeles</span> County</h2>
+            <p class="section-subtitle text-center animate animate-delay-1">We provide appliance brand repair across Los Angeles and nearby communities.</p>
+            <div class="areas-grid">
+                <div class="area-item animate">Los Angeles</div>
+                <div class="area-item animate animate-delay-1">West Los Angeles</div>
+                <div class="area-item animate animate-delay-2">Santa Monica</div>
+                <div class="area-item animate animate-delay-3">West Hollywood</div>
+                <div class="area-item animate animate-delay-4">Culver City</div>
+                <div class="area-item animate animate-delay-5">Brentwood</div>
+                <div class="area-item animate animate-delay-1">Sherman Oaks</div>
+                <div class="area-item animate animate-delay-2">North Hollywood</div>
+                <div class="area-item animate animate-delay-3">Van Nuys</div>
+                <div class="area-item animate animate-delay-4">Burbank</div>
+                <div class="area-item animate animate-delay-5">Glendale</div>
+                <div class="area-item animate animate-delay-1">Pasadena</div>
+                <div class="area-item animate animate-delay-2">El Monte</div>
+                <div class="area-item animate animate-delay-3">Long Beach</div>
+            </div>
+            <p class="text-center animate animate-delay-3" style="margin-top:20px; color:var(--gray);">Call to confirm service for your area.</p>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Schedule Brand <span style="color:var(--primary);">Appliance Repair</span></h2>
+            <p class="animate animate-delay-1">Do not let a broken appliance disrupt your home or business. Share the brand and appliance problem with Sub-Zero &amp; Viking Repair of Los Angeles so the right service visit can be arranged.</p>
+            <div class="animate animate-delay-2">
+                <a href="tel:+13107263218" class="btn btn-primary"><i class="fas fa-phone"></i> (310) 726-3218</a>
+                <a href="#" class="btn btn-outline">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCROLL ANIMATION ===== -->
+    <script>
+        const animateElements = document.querySelectorAll('.animate, .animate-left, .animate-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.animate, .animate-left, .animate-right').forEach(el => {
+            el.style.opacity = '0';
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.page-hero .animate').forEach(el => {
+                el.style.opacity = '1';
+            });
+        }, 100);
+    </script>
+
+</body>
+</html>
