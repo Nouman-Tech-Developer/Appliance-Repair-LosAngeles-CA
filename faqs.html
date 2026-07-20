@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Sub-Zero & Viking Repair Of Los Angeles</title>
+    <meta name="description" content="HAVE ANY QUESTIONS? Find answers to common appliance repair questions. Call (310) 726-3218 for expert service.">
+    <link rel="icon" href="https://subzerovikingappliancerepair.net/wp-content/uploads/2026/02/cropped-Sub-Zero-Viking-Repair-of-Los-Angeles-Favicon-32x32.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="load-includes.js" defer></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #e65644;
+            --primary-dark: #d64f3e;
+            --dark: #000422;
+            --dark-bg: #0d0000;
+            --gray: #8e91aa;
+            --light-bg: #f8f8fb;
+            --white: #ffffff;
+            --teal: #06BBBC;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        body { font-family: 'Roboto', sans-serif; color: var(--dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .text-white { color: var(--white); }
+        .text-primary { color: var(--primary); }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-30 { margin-bottom: 30px; }
+        .mb-40 { margin-bottom: 40px; }
+        .mt-20 { margin-top: 20px; }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        .section-title span { color: var(--primary); }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(230,86,68,0.35); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--dark); }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .animate { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a3a 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230,86,68,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .page-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        .page-hero h1 span { color: var(--primary); }
+        .page-hero p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 15px auto 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* FAQ ACCORDION */
+        .faq-section { padding: 60px 0; background: var(--white); }
+        .faq-section:nth-child(even) { background: var(--light-bg); }
+        
+        .faq-category-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .faq-category-title span { color: var(--primary); }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+        .faq-item:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        
+        .faq-question {
+            padding: 20px 25px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            font-size: 1rem;
+            gap: 15px;
+            color: var(--dark);
+        }
+        .faq-question:hover { background: rgba(230,86,68,0.04); }
+        .faq-question .num {
+            color: var(--primary);
+            font-size: 0.85rem;
+            background: rgba(230,86,68,0.1);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        .faq-question.active i { transform: rotate(180deg); }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 25px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .faq-answer.open {
+            max-height: 400px;
+            padding: 0 25px 20px;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a3a 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-section h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.2rem; margin-bottom: 15px; }
+        .cta-section p { opacity: 0.8; max-width: 600px; margin: 0 auto 25px; }
+        .cta-section .btn { margin: 0 10px 10px; }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .faq-grid { grid-template-columns: 1fr; max-width: 700px; }
+        }
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .faq-category-title { font-size: 1.4rem; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .btn { width: 100%; text-align: center; }
+            .faq-question { font-size: 0.9rem; padding: 15px 18px; }
+            .faq-answer { font-size: 0.9rem; padding: 0 18px; }
+            .faq-answer.open { padding: 0 18px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER LOADED BY JS ===== -->
+    <!-- ===== FOOTER LOADED BY JS ===== -->
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="animate">Frequently Asked <span>Questions</span></h1>
+            <p class="animate animate-delay-1">Find answers to common appliance repair questions. Have a different question? Call us at (310) 726-3218.</p>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 1: GENERAL APPLIANCE REPAIR ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-category-title animate">General <span>Appliance Repair</span></h2>
+            <div class="faq-grid">
+
+                <div class="faq-item animate animate-delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q1</span> What types of appliances do you repair?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We provide comprehensive repair services for a wide variety of major household appliances. Our skilled technicians regularly fix refrigerators, freezers, washing machines, dryers, ovens, stoves, ranges, and dishwashers. If you have a specific appliance acting up, just reach out to our team to see how we can help.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q2</span> Do you repair all appliance brands?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we service almost all major appliance brands. Whether you own a Samsung, LG, Whirlpool, GE, Maytag, Bosch, or a premium brand like Sub-Zero or Wolf, our technicians carry the right tools and diagnostic equipment to get your machine running smoothly again.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q3</span> Do you repair both gas and electric appliances?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Absolutely. Our appliance repair technicians undergo extensive training to safely and effectively handle both gas and electric units. Whether you need a heating element replaced in an electric dryer or a valve repaired on a gas stove, we have the expertise to complete the job to the highest safety standards.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q4</span> What areas do you serve for appliance repair?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We proudly provide comprehensive appliance repair services throughout Los Angeles and Orange Counties, California. Whether you are located in the heart of LA or the suburbs of Orange County, our expert technicians are available to come directly to your home or business to fix your appliances.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: APPOINTMENTS & SERVICE ===== -->
+    <section class="faq-section" style="background:var(--light-bg);">
+        <div class="container">
+            <h2 class="faq-category-title animate">Appointments <span>&amp; Service</span></h2>
+            <div class="faq-grid">
+
+                <div class="faq-item animate animate-delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q5</span> How quickly can I schedule an appliance repair appointment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">You can schedule an appointment immediately by contacting our customer support team. We understand how important your household appliances are to your daily routine, so we work efficiently to get a technician to your door as soon as possible.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q6</span> Do you offer same-day appliance repair service?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we prioritize urgent requests and frequently offer same-day appliance repair, depending on technician availability in your area. We proudly provide appliance repair services to all cities across Los Angeles and Orange counties, California.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q7</span> How can I schedule an appliance repair service?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Scheduling your appliance repair service is simple. You can call our main service line directly or fill out the booking form on our website. Once you provide the details of your appliance issue, our team will quickly confirm your appointment time and dispatch a qualified technician to your location.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q8</span> Do you offer emergency appliance repair services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We certainly do. Appliance breakdowns do not always happen during convenient hours, which is why we offer emergency appliance repair services for urgent situations. If you are dealing with a critical issue, such as a failing refrigerator or a severely leaking washer, please call us right away so we can dispatch a repair specialist to your home.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: COST & REPAIR PROCESS ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-category-title animate">Cost <span>&amp; Repair Process</span></h2>
+            <div class="faq-grid">
+
+                <div class="faq-item animate animate-delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q9</span> How much does appliance repair usually cost?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">The final cost depends on the type of appliance and the specific issue. We provide clear, upfront pricing before any work begins, so you know exactly what you will pay without any hidden fees.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q10</span> Is it better to repair or replace a broken appliance?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">As a general rule, fixing your appliance is the smart choice if the repair costs less than half the price of a new unit and the machine still has a few good years left. Our technicians will always give you an honest assessment to help you decide which option makes the most financial sense.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q11</span> How long does a typical appliance repair take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Most jobs are completed in a single visit. We keep our service vehicles fully stocked with common parts so we can fix your appliance on the spot and get your household back to normal as quickly as possible.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q12</span> Do you use original or high-quality replacement parts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes. We use original equipment manufacturer parts or premium-grade replacements for every job. This guarantees that your appliance will perform at its best and that the repair will last over time.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: COMMON APPLIANCE PROBLEMS ===== -->
+    <section class="faq-section" style="background:var(--light-bg);">
+        <div class="container">
+            <h2 class="faq-category-title animate">Common <span>Appliance Problems</span></h2>
+            <div class="faq-grid">
+
+                <div class="faq-item animate animate-delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q13</span> What should I do if my appliance suddenly stops working?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">First, check the power supply to make sure the unit is plugged in, and the circuit breaker hasn't tripped. If the power connection is fine and it still won't turn on, it is best to call a professional for appliance repair. We can diagnose the issue quickly and safely.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q14</span> What are the common signs that an appliance needs repair?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Look out for strange noises, unusual smells, water leaks, or a sudden drop in performance. We handle everything from refrigerator and freezer repair, ice maker and wine cooler repair, to oven and range repair, stove and cooktop repair, washer and dryer repair, and dishwasher repair.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q15</span> Can you fix refrigerators that are not cooling properly?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we can. A fridge that will not stay cold is a very common appliance problem that can quickly lead to spoiled food. Our technicians are highly trained to find the issue and get your unit cooling again.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q16</span> Do you repair leaking dishwashers or washing machines?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Absolutely. Leaks can cause serious water damage to your floors and home, so it is important to fix them fast. We provide expert washer and dryer repair, as well as dishwasher repair, to stop leaks and get your laundry and kitchen routines back to normal.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: MAINTENANCE & PREPARATION ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-category-title animate">Maintenance <span>&amp; Preparation</span></h2>
+            <div class="faq-grid">
+
+                <div class="faq-item animate animate-delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q17</span> Do you provide appliance maintenance services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we provide comprehensive maintenance and appliance repair services to keep your home running smoothly. Our technicians handle refrigerator and freezer repair, ice maker fixes, wine cooler repair, oven and range repair, stove and cooktop repair, washer and dryer repair, and dishwasher repair.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q18</span> How can I extend the life of my home appliances?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Regular cleaning and basic upkeep are the best ways to keep your machines running well. Make sure to clean your filters, check hoses for leaks, and avoid overloading your washer or dishwasher. Scheduling routine maintenance with a professional can also help catch small issues before they turn into costly breakdowns.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q19</span> What should I do before the technician arrives for repair?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Please clear the space around the appliance so our technician has plenty of room to work. It is also helpful to empty the unit if we are working on a fridge or oven, and please secure any pets in another room. Having a clear path and a brief description of the problem ready will help us get the job done faster.</div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span><span class="num">Q20</span> Why should I hire a professional appliance repair technician?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Hiring a professional ensures the repair is done safely and correctly the first time. Modern appliances use complex electrical and water systems that can be dangerous to work on without the right training. Our skilled technicians have the proper tools and experience to quickly fix your appliances, saving you time, money, and stress in the long run.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate">Schedule <span style="color:var(--primary);">Appliance Repair</span> Service</h2>
+            <p class="animate animate-delay-1">If your appliance is not working properly, professional repair can help restore performance and extend the life of your equipment. Call us today for fast and reliable service.</p>
+            <div class="animate animate-delay-2">
+                <a href="tel:+13107263218" class="btn btn-primary"><i class="fas fa-phone"></i> (310) 726-3218</a>
+                <a href="#" class="btn btn-outline">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ TOGGLE SCRIPT ===== -->
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            const grid = element.closest('.faq-grid');
+            
+            // Close all other answers in the same grid
+            grid.querySelectorAll('.faq-answer').forEach(a => {
+                if (a !== answer) {
+                    a.classList.remove('open');
+                    a.previousElementSibling.classList.remove('active');
+                }
+            });
+            
+            // Toggle this one
+            if (isOpen) {
+                answer.classList.remove('open');
+                element.classList.remove('active');
+            } else {
+                answer.classList.add('open');
+                element.classList.add('active');
+            }
+        }
+
+        // Scroll Animation
+        const animateElements = document.querySelectorAll('.animate');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.opacity = '0';
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.page-hero .animate').forEach(el => {
+                el.style.opacity = '1';
+            });
+        }, 100);
+    </script>
+
+</body>
+</html>
